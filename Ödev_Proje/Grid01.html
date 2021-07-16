@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Burad class css kodu ile öncelikle her bir kutuyu isimlendirip ileriki aşamaşarda kutucuklarını konumunu değiştirmmek için kullanacağız.*/
+.item1 { grid-area: baslik; }
+.item2 { grid-area: liste; }
+.item3 { grid-area: paragraf; }
+.item4 { grid-area: image; }
+.item5 { grid-area: number; }
+.item6 { grid-area: bolum; }
+.item7 { grid-area: school; }
+.item8 { grid-area: university; }
+
+.grid-container { /* Büyük kutu ve özellikleri */
+
+  display:grid; /* Burada ktu içindeki elemanları satır ve sütün şeklinde kutu içinde konumlandırma yapılmştır. */
+  grid-template-areas: /* Burada da yukarıda isimlendirdiğimiz her kutuyu aşağıdaki gibi konumlandırma yapıyoruz. */
+    'baslik baslik baslik baslik baslik baslik'
+	'liste paragraf paragraf paragraf image image'
+	'liste paragraf paragraf paragraf image image'
+	'number bolum school school university university';
+	
+  grid-gap: 10px; /* Kutular arasındaki boşluğu ayarlamak için kullanılmıştır. */
+  background-color: #2196F3; /* Arka Plan Rengi */
+  padding:10px; /* Çerçeve kalınlığı için kullanılmıştır. */
+}
+
+.grid-container > div { /* Büyük kutunun içindeki sıralı kutular ve özellikleri. */
+  background-color: rgba(255, 255, 255, 0.8); /* Burada arka plan rengi opaklık ayarlanmıştır. */ 
+  text-align: center; /* Burada kutu içindeki yazılar ortalanmıştır. */
+  padding: 20px 0; /* Burada küçük kutuların içindeki boşluk ayarlanmıştır */
+  font-size: 30px; /* Burada yazı boyutu 30px ayarlanmıştır. */
+}
+</style>
+</head>
+<body>
+<!--  Burada da yukarıda tanımlamış olduğumuz özellikleri div class yoluyla çağırıp ekrana yazdırılmasıdır. -->
+<div class="grid-container"> 
+  <div class="item1">Oğuzhan Koğar</div>
+  <div class="item2">Liste</div>
+  <div class="item3">Paragraf</div>  
+  <div class="item4">İmage</div>
+  <div class="item5">Number</div>
+  <div class="item6">Bölüm</div>
+  <div class="item7">Okul</div>
+  <div class="item8">Üniversite</div>
+</div>
+
+</body>
+</html>

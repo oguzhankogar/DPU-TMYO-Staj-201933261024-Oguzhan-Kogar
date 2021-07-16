@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: baslik; }
+.item2 { grid-area: liste; }
+.item3 { grid-area: paragraf; }
+.item4 { grid-area: image; }
+.item5 { grid-area: number; }
+.item6 { grid-area: bolum; }
+.item7 { grid-area: school; }
+.item8 { grid-area: university; }
+
+.grid-container {
+  display:grid;
+  grid-template-areas:
+    'baslik baslik baslik baslik baslik baslik'
+	'liste paragraf paragraf paragraf image image'
+	'liste paragraf paragraf paragraf image image'
+	'number bolum school school university university';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding:10px;
+}
+@media screen and (max-height:524px){
+	.grid-container {
+  display:grid;
+  grid-template-areas:
+  'baslik baslik baslik baslik baslik baslik'
+  'image image paragraf paragraf paragraf liste'
+  'image image paragraf paragraf paragraf liste'
+  'bolum school school university university number';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+	}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size:15px;
+}
+select{
+	-webkit-border-radius:5px;
+	padding:10px;
+	background-color:#CC0;
+	}
+</style>
+</head>
+<body>
+<div class="grid-container"> 
+  <div class="item1">Oğuzhan Koğar</div>
+  <div class="item2"> 
+  <select>
+  <option>HTML5</option>
+  <option>GROOVY</option>
+  <option>OBJECTİVE-C</option>
+  <option>VİSUAL BASİC</option>
+  <option>PHP</option>
+  <option>PYTHON</option>
+  <option>C++</option>
+  <option>JAVA</option>
+  </select>
+  </div>
+  <div class="item3">Hyper Text Markup Language kelimelerinin, Türkçe ifade ile "Zengin Metin İşaretleme Dili"nin baş harflerinin kısaltması olan HTML, CERN'de müteahhit olarak çalışan Tim Berners-Lee tarafından 80'li yıllarda geliştirilen, 90'lı yıllarda ise adının konduğu bir web standartıdır. Tim Berners-Lee aynı zamanda açılımı WorldWideWeb Consortium olan W3C'nin de kurucusudur. Bu kısım sizin için önemli çünkü W3C bugün tüm web tarayıcılarındaki standartı belirleyen uluslararası bir organizasyondur.</div>  
+  <div class="item4"><img src="Grid.png" width="270" height="267" /></div>
+  <div class="item5">201933261024</div>
+  <div class="item6">İAT</div>
+  <div class="item7">Tavşanlı MYO</div>
+  <div class="item8">Kütahya Dumlupınar Üniversitesi</div>
+</div>
+
+</body>
+</html>
