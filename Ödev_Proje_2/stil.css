@@ -1,0 +1,60 @@
+@charset "utf-8"
+
+.item1 { flex-area: kutu1; }
+.item2 { flex-area: kutu2; }
+.item3 { flex-area: kutu3; }
+.item4 { flex-area: kutu4; }
+.item5 { flex-area: kutu5; }
+.item6 { flex-area: kutu6; }
+.item7 { flex-area: kutu7; }
+
+/*büyük kutu css kodları*/
+.flex-container {
+	display: flex;/*display özelliğini flex olarak kullanarak div kutularını esnek yapıya getirdim.*/
+		background-color: #2196F3;/*burada oluşturduğumuz büyük kutunun boyutunu mavi yaptım*/
+		padding: 6px; /*burada büyük kutunun içine gelecek öğelerin kutu içindeki kenar boşluklarını ayarladım.*/
+		margin: 0 6rem;/*büyük kutunun ana sayfa üzerinden sağdan ve soldan boyutun küçülme işemeni yapıyor.*/
+		border-radius: 24px;/*mavi kutunun kenarların 24px oval hale getirdim*/
+}
+/*büyük kutunun içindeki 7 kutunun içeriğini içeren css kodları*/
+.flex-container .item{
+	background-color: #000;/*büyük kutun içinde bulunacak kutuların arka plan rengini ayarladım*/
+    	color: #fff;/*yazı rengini beyaz yaptım*/
+    	height: 100%;/*büyük kutunu içine sığacak şekilde hepsini eşit büyüklükte yapıyor */
+    	border-radius: 24px;/*kutuların kenarlıklarını 24px oval yaptım */
+    	padding: 13px;/*kutuların içindeki boşluk 13px olarak yaptım birnevi kutuların genişliğini veya büyüklüğünüde ayarlamış sayılırım*/
+	}
+
+
+/*1.kutu ve diğer 6 kutunun css kodları*/	
+.flex-col {
+display: flex;/*burda da aynı şekilde kutuları esnek hale getirdim*/
+    flex-direction: column;/*burada da esnek hale getirdiğim kutuların alt alta sıralanması için column özelliğini kullandım*/
+    width: 100%; /*büyük kutu nun içine sığacak şekilde 100% genişlik sağlıyor burada*/
+    padding: 0 3px;/*kutuların birbirleri arasındaki bosluk sağdan ve soldan eşit şekilde 3px olarak ayarladım */
+}
+
+.mb-5px {
+	margin-bottom: 5px;/*burada da kutular arasında yukardan ve aşağıdan eşit şekilde 5px boşluk bıraktım */
+	}
+
+.text-center {
+		text-align: center;/*burada ktuların içindeki yazıları ortaladım*/
+	}
+	
+a{
+	color:#FFF;/*burada verdiğim linkleri yazısını beyaz olarak ayarladım*/
+	text-decoration:none;/*linklerin altındaki çizgileri sildim*/
+	}
+a:hover{
+	color:#0F9/*burada linkin üstüne gelince yazının rengini değiştirdim*/
+	}
+	/*sayfa genişliği 500px den küçükken kutuların hepsi alt alta geliyor */
+@media screen and (max-width: 500px){
+	.flex-container{
+		flex-direction: column;/*column özelliği ile sayfanın genişliği 500px den küçükken bütün kutuları alt alta aldım */
+	}
+	.summary {
+		margin-bottom: 5px;/*kutular alt alta geldiğinde 1 kutu ile diğer kutu arasındaki boşluğu 5px oalrak ayarladım*/ 
+	}
+
